@@ -1,0 +1,130 @@
+/* Audio Spectograms Analyzer Custom Styles */
+
+/* Root variables for theming */
+:root {
+    --primary-color: #1f77b4;
+    --secondary-color: #ff7f0e;
+    --success-color: #2ca02c;
+    --error-color: #d62728;
+    --background-color: #ffffff;
+    --text-color: #262730;
+    --border-color: #e6e9ef;
+}
+
+/* Dark theme variables */
+[data-theme="dark"] {
+    --background-color: #0e1117;
+    --text-color: #fafafa;
+    --border-color: #262730;
+}
+
+/* Custom header styling */
+.main-header {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    padding: 1rem;
+    border-radius: 0.5rem;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+/* File uploader styling */
+.stFileUploader > div {
+    border: 2px dashed var(--primary-color);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    transition: all 0.3s ease;
+}
+
+.stFileUploader > div:hover {
+    border-color: var(--secondary-color);
+    background-color: rgba(31, 119, 180, 0.05);
+}
+
+/* Button styling */
+.stButton > button {
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.stButton > button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Progress bar customization */
+.stProgress .css-1cypcdb {
+    background-color: var(--primary-color);
+}
+
+/* Spectrogram container */
+.spectrogram-container {
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    background-color: var(--background-color);
+}
+
+/* Feature table styling */
+.stDataFrame {
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+/* Audio player styling */
+.stAudio {
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    background-color: rgba(31, 119, 180, 0.05);
+}
+
+/* Tab styling */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 0.5rem;
+}
+
+.stTabs [data-baseweb="tab"] {
+    border-radius: 0.5rem 0.5rem 0 0;
+    padding: 0.5rem 1rem;
+}
+
+/* Info boxes */
+.stInfo {
+    border-left: 4px solid var(--primary-color);
+    background-color: rgba(31, 119, 180, 0.1);
+}
+
+.stSuccess {
+    border-left: 4px solid var(--success-color);
+    background-color: rgba(44, 160, 44, 0.1);
+}
+
+.stError {
+    border-left: 4px solid var(--error-color);
+    background-color: rgba(214, 39, 40, 0.1);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .main-header {
+        text-align: center;
+    }
+    
+    .stColumns {
+        flex-direction: column;
+    }
+}
+
+/* Animation for loading */
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.loading {
+    animation: pulse 1.5s infinite;
+}
